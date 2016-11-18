@@ -17,3 +17,11 @@ function modify_jquery() {
 }
 
 add_action('init', 'modify_jquery');
+
+function afterschool_theme_setup() {
+    add_theme_support('menus');
+    register_nav_menu('welcome-menu', 'Home Page: Jumbotron Welcome Menu');
+    register_nav_menu('primary-navigation', 'Primary Navigation Menu: Spheres');
+}
+
+add_action('after_setup_theme', 'afterschool_theme_setup');

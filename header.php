@@ -6,3 +6,4 @@
     <?php wp_head(); ?> <!-- Wordpress function that says where to print all hooks and actions -->
   </head>
   <body>
+    <?php wp_nav_menu(array('theme_location'=>'primary-navigation')); ?>
