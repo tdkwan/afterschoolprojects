@@ -1,0 +1,28 @@
+/*
+  Theme Name:After School Projects
+  Theme URI: http://afterschoolprojects.co
+  Author: Timothy Kwan
+  Author URI:
+  Description: Theme for the creative website, after school projects.
+  Version: 1.0.0
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Tags: Responsive, Masonry, Blog, Spheres, Category
+  Text Domain: afterschoolprojects
+*/
+/*
+Fonts available for usage and syntax:
+font-family: 'Amiri', serif;
+font-family: 'Contrail One', cursive;
+*/
+html,
+body {
+    background-color: white;
+}
+.article-title {
+  font-family: 'Amiri',serif;
+}
+.article-content-container {
+  font-family: "Times New Roman",serif;
+  font-style: italic;
+}
