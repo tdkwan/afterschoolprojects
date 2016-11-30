@@ -19,10 +19,3 @@ html,
 body {
     background-color: white;
 }
-.article-title {
-  font-family: 'Amiri',serif;
-}
-.article-content-container {
-  font-family: "Times New Roman",serif;
-  font-style: italic;
-}

@@ -15,8 +15,65 @@
 Fonts available for usage and syntax:
 font-family: 'Amiri', serif;
 font-family: 'Contrail One', cursive;
+font-family: 'Roboto', sans-serif;
 */
 html,
 body {
   background-color: white;
+}
+.article-title {
+  font-family: 'Amiri',serif;
+}
+.article-content-container {
+  font-family: "Times New Roman",serif;
+  font-style: italic;
+}
+
+hr {
+  display:block;
+  color: black;
+  border-width: 2px;
+}
+/*
+NAVIGATION BAR PRIMARY NAVIGATION
+for use on all sphere pages:
+*/
+
+.menu-primary-navigation-container {
+  color: white;
+}
+
+#menu-primary-navigation {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+#menu-primary-navigation li {
+  float:left;
+
+}
+#menu-primary-navigation li:hover a:hover{
+  -webkit-transition: ease-in-out .3s;
+  color: white;
+  background-color: #C0BABA;
+}
+
+#menu-primary-navigation a {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 2em;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+#menu-primary-navigation a:hover{
+    -webkit-transition: ease-in-out .3s;
+    opacity:.5
 }
