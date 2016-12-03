@@ -77,3 +77,17 @@ for use on all sphere pages:
     -webkit-transition: ease-in-out .3s;
     opacity:.5
 }
+
+/*HOME--FRONT PAGE ISOTOPE GRID LAYOUT
+  for use on the front page
+*/
+
+.grid-sizer .grid-tall {
+  width: 30%;
+}
+.grid-featured {
+  width: 30%;
+}
+.grid-featured img {
+  width:30%;
+}
