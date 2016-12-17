@@ -21,6 +21,7 @@ html,
 body {
   background-color: white;
 }
+
 .article-title {
   font-family: 'Amiri',serif;
 }
@@ -43,17 +44,73 @@ for use on all sphere pages:
   color: white;
 }
 
+/*HEADER MENU // HOME // MEET US // SOCIAL/
+============================================
+*/
+
+#menu-header-menu {
+  padding-top: 1em;
+  padding-left :1em;
+  list-style-type:none;
+  overflow:hidden;
+}
+
+#menu-header-menu li {
+  padding: 1em;
+  float:left;
+}
+#menu-header-menu .menu-item-29 {
+  float:right;
+  padding-right: 5%;
+}
+/*SOCIAL MEDIA*/
+#menu-header-menu .menu-item-74 {
+  float:right;
+  padding-right: 5%;
+}
+#menu-header-menu .menu-item-75{
+  float:right;
+  padding-right: 8%;
+}
+#menu-header-menu img {
+  height: 18px;
+  width: 18px;
+}
+
+
+#menu-header-menu a {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding-left: 1em;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/*SPHERE MENU
+===================================
+*/
+.menu-primary-navigation-container {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align:center;
+}
+
 #menu-primary-navigation {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
   background-color: white;
+  display: inline-block;
 }
 
 #menu-primary-navigation li {
   float:left;
-
 }
 #menu-primary-navigation li:hover a:hover{
   -webkit-transition: ease-in-out .3s;
@@ -64,10 +121,11 @@ for use on all sphere pages:
 #menu-primary-navigation a {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    display: inline-block;
+
     color: black;
     text-align: center;
-    padding: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
     text-decoration: none;
     transition: 0.3s;
     font-size: 17px;
@@ -79,15 +137,19 @@ for use on all sphere pages:
 }
 
 /*HOME--FRONT PAGE ISOTOPE GRID LAYOUT
+=============================================
   for use on the front page
 */
-
+#grid {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .grid-sizer .grid-tall {
-  width: 30%;
+  width: 20%;
 }
 .grid-featured {
-  width: 30%;
+  width: 90%;
 }
 .grid-featured img {
-  width:30%;
+  width: 100%;
 }

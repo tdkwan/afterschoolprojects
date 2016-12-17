@@ -1,12 +1,12 @@
 jQuery(function($) {
-      var $container = $('.grid');
+      var $container = $('#grid');
 
-      $container.imagesLoaded(function() {
-        $container.masonry();
-      });
-      $('.grid').isotope({
+
+      $container.isotope({
         itemSelector: '.grid-item',
+        percentPosition: true,
         masonry: {
+          columnWidth: '.grid-sizer'
         }
       });
 });
