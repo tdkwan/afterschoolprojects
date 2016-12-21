@@ -16,33 +16,106 @@ Fonts available for usage and syntax:
 font-family: 'Amiri', serif;
 font-family: 'Contrail One', cursive;
 font-family: 'Roboto', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: ministry, sans-serif;
+font-style: normal;
+font-weight: 100;
 */
 html,
 body {
   background-color: white;
 }
-
-.article-title {
-  font-family: 'Amiri',serif;
-}
-.article-content-container {
+p {
   font-family: "Times New Roman",serif;
   font-style: italic;
 }
 
-hr {
-  display:block;
-  color: black;
-  border-width: 2px;
+/*
+ARTICLE STYLING
+======================
+*/
+.post-featured-img-container {
+  text-align:center;
 }
+.post-featured-img-container img {
+  padding-top: 1em;
+  width: 90%;
+  height: auto;
+}
+
+.article-container p {
+  padding-bottom: 1em;
+}
+.article-title-container{
+  text-align:center;
+}
+.article-title-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight:bold;
+  margin: 0 auto;
+  padding-bottom:;
+}
+
+.article-content-container {
+  font-family: "Times New Roman",serif;
+  font-style: italic;
+  text-align: center;
+}
+.article-content-container-small p {
+  margin: 0 auto;
+  padding-top: .8em;
+  width: 40%;
+  padding-bottom: 1.5em;
+}
+.article-content-container-writing {
+  font-family: "Times New Roman",serif;
+  font-style: normal !important;
+  text-align: left;
+  margin: 0 auto;
+  width: 70%;
+  display:block;
+}
+.article-content-container-writing p {
+}
+
+hr {
+  width: 40%;
+  display:block;
+  border: solid black 1px;
+  border-width: 1px;
+}
+
+/*
+GALLERY
+===============
+*/
+
+	#gallery-1 {
+    padding-left: 2%;
+    padding-right: 2%;
+		margin: auto;
+	}
+	#gallery-1 .gallery-item {
+    padding: 5px 5px 5px 5px;
+		float: left;
+		margin-top: 10px;
+		text-align: center;
+		width: 33%;
+	}
+	#gallery-1 img {
+    width: 100%;
+    height: auto;
+		border: 0 !important;
+	}
+	#gallery-1 .gallery-caption {
+		margin-left: 0;
+	}
+		/* see gallery_shortcode() in wp-includes/media.php */
+
 /*
 NAVIGATION BAR PRIMARY NAVIGATION
 for use on all sphere pages:
 */
-
-.menu-primary-navigation-container {
-  color: white;
-}
 
 /*HEADER MENU // HOME // MEET US // SOCIAL/
 ============================================
@@ -59,6 +132,7 @@ for use on all sphere pages:
   padding: 1em;
   float:left;
 }
+#menu-header-menu a {}
 #menu-header-menu .menu-item-29 {
   float:right;
   padding-right: 5%;
@@ -79,8 +153,9 @@ for use on all sphere pages:
 
 
 #menu-header-menu a {
-  font-family: 'Roboto', sans-serif;
+  font-family: ministry, sans-serif;
   text-transform: uppercase;
+  font-style: normal;
   display: inline-block;
   color: black;
   text-align: center;
@@ -94,13 +169,22 @@ for use on all sphere pages:
 ===================================
 */
 .menu-primary-navigation-container {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: center;
   width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
-  text-align:center;
+  overflow-x:visible;
 }
 
 #menu-primary-navigation {
+  position:
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
@@ -108,48 +192,161 @@ for use on all sphere pages:
   background-color: white;
   display: inline-block;
 }
-
+#menu-primary-navigation ul {
+  width: 100%;
+  padding: 0;
+}
 #menu-primary-navigation li {
+  -webkit-transition: ease-in-out .5s;
+  text-align: center;
+  display:block;
+  width: 150px;
   float:left;
+
+}
+#menu-primary-navigation img {
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
 }
 #menu-primary-navigation li:hover a:hover{
-  -webkit-transition: ease-in-out .3s;
-  color: white;
-  background-color: #C0BABA;
+  -webkit-transition: ease-in-out .4s;
+  background-color: #EA8D79;
 }
 
 #menu-primary-navigation a {
-    font-family: 'Roboto', sans-serif;
+    display: block;
+    height: 150px;
+    font-family: ministry, sans-serif;
+    font-style: bold;
     text-transform: uppercase;
-
     color: black;
     text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
     text-decoration: none;
-    transition: 0.3s;
     font-size: 17px;
 }
+/*HOME LOGO
+=======================================
+*/
 
-#menu-primary-navigation a:hover{
-    -webkit-transition: ease-in-out .3s;
-    opacity:.5
+.home-logo-container {
+  text-align: center;
+  width: 100%;
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-bottom: 1%;
 }
 
+.home-logo {
+  margin: 0 auto;
+}
+
+.home-logo img {
+  width: 100%;
+}
 /*HOME--FRONT PAGE ISOTOPE GRID LAYOUT
 =============================================
   for use on the front page
 */
 #grid {
-  padding-left: 5%;
-  padding-right: 5%;
+  width: 100%;
+  margin-left: 2%
 }
-.grid-sizer .grid-tall {
+.grid-sizer {
   width: 20%;
 }
 .grid-featured {
-  width: 90%;
+  width: 100%;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .grid-featured img {
   width: 100%;
 }
+
+.grid-item {
+  padding: 10px 10px 10px 10px;
+  float: left;
+}
+.grid-tall {
+  width: 20%;
+}
+.grid-wide {
+  width: 80%;
+}
+.grid-item img {
+  width: 100%;
+}
+
+/*
+GRID STYLING
+=========================
+*/
+.post-text-container a {
+  font-family: ministry, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  text-decoration: none;
+  color: #726c5e;
+}
+.post-text-container .article-name h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  text-decoration:none;
+  color: black;
+  -webkit-transition: ease-in-out .2s;
+}
+.post-text-container .article-name h3:hover {
+  color: #726c5e;
+}
+.post-text-container {
+  padding-top: 10px;
+}
+.post-text-container p {
+  padding-bottom: 4px;
+}
+.post-text-container .article-author a {
+  font-family: ministry, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  text-decoration: none;
+  color: #726c5e;
+}
+
+/*
+FLEX ATTEMPT
+=============================================
+*/
+
+.front-page-flex {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.flex-item-featured {
+  width: 500px;
+}
+.flex-item-featured img {
+  width: 100%;
+}
+.flex-item-tall {
+  width: 200px;
+}
+.flex-item-tall img {
+  width: 100%;
+}
+
+/*
+FOOTER STYLING
+============================================
+*/

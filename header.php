@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>AFTER SCHOOL PROJECTS</title>
-    <link href="https://fonts.googleapis.com/css?family=Amiri:700|Contrail+One|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amiri:700|Contrail+One|Playfair+Display:400,700|Roboto" rel="stylesheet">
+    <script src="https://use.typekit.net/yls0kbn.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <?php wp_head(); ?> <!-- Wordpress function that says where to print all hooks and actions -->
   </head>
 
