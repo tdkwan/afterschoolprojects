@@ -14,6 +14,7 @@
               <div class="post-featured-img-container">
                 <?php the_post_thumbnail();?>
               </div>
+              <a href="<?php get_permalink(); ?>">article</a>
               <div class="article-content-container">
                 <div class="article-content-container-small">
                   <p class="article-content"><?php the_content();?></p>

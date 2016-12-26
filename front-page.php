@@ -24,7 +24,7 @@
               <h3 class="article-name-word">Home defined:</h3>
             </a>
           </div>
-          <div class="article-content">
+          <div class="grid-article-content">
             <p>Home by definition is relative, sometimes it's a state of mind, sometimes it's a place...</p>
           </div>
           <div class="article-author">
@@ -34,7 +34,7 @@
       </div>
 
       <div class="grid-item grid-wide">
-        <a href="http://localhost:8888/wordpress-asp/category/photosvids/">
+        <a href="http://localhost:8888/wordpress-asp/photosvids/thailands-youth/">
           <img class="grid-item-photo" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2016/12/IMG_1429.jpg">
         </a>
         <div class="post-text-container">
@@ -42,11 +42,11 @@
             <a href="http://localhost:8888/wordpress-asp/category/photosvids/">Photos/Vids</a>
           </div>
           <div class="article-name">
-            <a href="http://localhost:8888/wordpress-asp/category/photosvids/">
+            <a href="http://localhost:8888/wordpress-asp/photosvids/thailands-youth/">
               <h3 class="article-name-word">Thailand's Youth</h3>
             </a>
           </div>
-          <div class="article-content">
+          <div class="grid-article-content">
             <p>Look closely enough and see the inherent joy that can be found in every kid across the globe.
             </p>
           </div>
@@ -57,9 +57,26 @@
       </div>
 
       <div class="grid-item grid-wide">
-        <a href="#">
-          <img class="grid-tall home" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2016/12/DSC_0033.jpg">
+        <a href="http://localhost:8888/wordpress-asp/discover/vance-creek-bridge/">
+          <img class="grid-item-photo" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2016/12/IMG_9430.jpg">
         </a>
+        <div class="post-text-container">
+          <div class="sphere-name">
+            <a href="http://localhost:8888/wordpress-asp/category/discover/">Discover</a>
+          </div>
+          <div class="article-name">
+            <a href="http://localhost:8888/wordpress-asp/discover/vance-creek-bridge/">
+              <h3 class="article-name-word">Vance Creek Bridge</h3>
+            </a>
+          </div>
+          <div class="grid-article-content">
+            <p>Vance Creek Bridge is one of those places where you don't believe it actually exists until you feel it beneath your shoes.
+            </p>
+          </div>
+          <div class="article-author">
+            <a href="#">Aidan Galassetti</a>
+          </div>
+        </div>
       </div>
     </div>
 <!--

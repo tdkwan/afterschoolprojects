@@ -20,14 +20,20 @@ font-family: 'Playfair Display', serif;
 font-family: ministry, sans-serif;
 font-style: normal;
 font-weight: 100;
+font-family: 'Libre Baskerville', serif;
+p {
+   font-family: 'MontrealRegular';
+   font-weight: normal;
+   font-style: normal;
+}
 */
 html,
 body {
   background-color: white;
 }
 p {
-  font-family: "Times New Roman",serif;
-  font-style: italic;
+  font-family: 'Libre Baskerville', serif;
+  font-size: .75em;
 }
 
 #grid img{
@@ -208,7 +214,7 @@ for use on all sphere pages:
   text-decoration: none;
   transition: 0.3s;
   font-size: 17px;
-  -webkit-transition: ease .7s;
+  -webkit-transition: ease- .7s;
 }
 #menu-header-menu li a:hover {
   -webkit-transition: ease .7s;
@@ -289,6 +295,9 @@ SECONDARY SPHERE MENU
   width: 100%;
   position:fixed;
   background-color: white;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.3);
 }
 
 #menu-secondary-navigation {
@@ -448,6 +457,69 @@ footer {
   background-color:#292930;
 }
 
+/*
+Single Article Format Styling
+===============================================
+*/
+.article-container {
+
+}
+.article-featured-img-container {
+  width: 100%;
+  position:relative;
+}
+.article-featured-img-container img {
+  width: 100%;
+  height: auto;
+  background-color:black;
+  -webkit-transition:ease .5s;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.3);
+}
+.article-featured-img-container img:hover {
+  opacity:.8;
+}
+.article-featured-title {
+  line-height: 1;
+  color: white;
+  width: 100%;
+  font-family: 'MontrealRegular';
+  font-weight: normal;
+  font-style:bold;
+  text-transform: uppercase;
+  padding-left: 2em;
+  font-size: 2em;
+  display:block;
+  position:absolute;
+  left:0;
+  bottom:0;
+  padding-bottom: .4em;
+}
+
+.article-content-container {
+  width: 100%;
+  padding-top: 1em;
+  text-align: center;
+}
+.article-content {
+  font-family: 'Libre Baskerville', serif;
+  font-style: normal;
+  text-align: left;
+  line-height: 2;
+  width: 60%;
+  margin: 0 auto;
+}
+.article-content ul{
+  font-family: 'Libre Baskerville', serif;
+  font-size: .75em;
+  font-style: normal;
+  text-align: left;
+  line-height: 2;
+  width: 100%;
+  margin: 0 auto;
+}
+.
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
