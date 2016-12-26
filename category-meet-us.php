@@ -6,29 +6,29 @@
   <?php if( have_posts() ):
     //Built in function have_posts (has blog posts, pages, etc.)
             while( have_posts() ): the_post(); ?>
-            <div class="article-container">
-              <div class="article-title-container">
-                <h1 class="article-title"><?php the_title(); ?></h1>
-              </div>
-              <hr></hr>
-              <div class="post-featured-img-container">
-                <?php the_post_thumbnail();?>
-              </div>
-              <div class="article-content-container">
-                <div class="article-content-container-small">
-                  <p class="article-content"><?php the_content();?></p>
-                </div>
-              </div>
-            </div>
+                  <div class="row meet-us-author-container"><!--We can create our own template files for all types of content using php
+                    using get_template_part('content',get_post_format()); searches for content-'aside''gallery' etc to generate
+                    a custom content template type !-->
+                    <div class="col-md-4 col-xs-12 meet-us-author-img">
+                      <?php the_post_thumbnail();?>
+                    </div>
+                    <div class="col-md-8 meet-us-author-text-container">
+                        <div class="meet-us-author-text-name">
+                          <?php the_title();?>
+                        </div>
+                        <hr></hr>
+                        <div class="meet-us-author-text-bio">
+                          <?php the_content();?>
+                        </div>
+                      </div>
+                  </div>
             <?php endwhile;
 
         endif;
   ?>
   <script>
     jQuery(function($) {
-      var activeSphere = $('#menu-item-92');
       $(document).ready(function(){
-          activeSphere.css({"background-color":"#EA8D79"});
           var secondaryNav = $('.menu-secondary-navigation-container');
           secondaryNav.hide();
           $(document).scroll(function(){

@@ -1,4 +1,5 @@
 <?php get_header();?>
+  <?php wp_nav_menu(array('theme_location'=>'secondary-navigation')); ?>
   <?php wp_nav_menu(array('theme_location'=>'header-menu')) ?>
   <div class="home-logo-container">
     <div class="home-logo">
@@ -7,17 +8,12 @@
   </div>
   <?php wp_nav_menu(array('theme_location'=>'primary-navigation')); ?>
     <!--ISOTOPE GRID INTRO PAGE!-->
-    <div class="grid-featured">
-      <a href="http://localhost:8888/wordpress-asp/category/discover/">
-        <img class="featured-img" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2016/12/featured.jpg">
-      </a>
-    </div>
     <div id="grid">
       <div class="grid-sizer"></div>
 
       <div class="grid-item grid-tall">
         <a href="#">
-          <img class="grid-tall home" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2016/12/IMG_0217.jpg">
+          <img class="grid-item-photo" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2016/12/IMG_0217.jpg">
         </a>
         <div class="post-text-container">
           <div class="sphere-name">
@@ -31,12 +27,15 @@
           <div class="article-content">
             <p>Home by definition is relative, sometimes it's a state of mind, sometimes it's a place...</p>
           </div>
+          <div class="article-author">
+            <a href="#">Timothy Kwan</a>
+          </div>
         </div>
       </div>
 
       <div class="grid-item grid-wide">
         <a href="http://localhost:8888/wordpress-asp/category/photosvids/">
-          <img class="grid-tall home" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2016/12/IMG_1429.jpg">
+          <img class="grid-item-photo" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2016/12/IMG_1429.jpg">
         </a>
         <div class="post-text-container">
           <div class="sphere-name">
@@ -63,7 +62,7 @@
         </a>
       </div>
     </div>
-
+<!--
   <div class="front-page-flex container">
     <div class="flex-item-featured">
       <a href="http://localhost:8888/wordpress-asp/category/photosvids/">
@@ -76,4 +75,22 @@
       </a>
     </div>
   </div>
+!-->
+<script>
+  jQuery(function($) {
+    $(document).ready(function(){
+        var secondaryNav = $('.menu-secondary-navigation-container');
+        secondaryNav.hide();
+        $(document).scroll(function(){
+          var position = $(this).scrollTop();
+          var passPoint = $('.menu-primary-navigation-container').position();
+          if (position > passPoint.top) {
+            secondaryNav.fadeIn(400);
+          } else {
+            secondaryNav.fadeOut(200);
+          }
+        });
+    });
+  });
+</script>
 <?php get_footer();?>

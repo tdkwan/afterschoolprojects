@@ -18,6 +18,7 @@ function afterschool_theme_setup() {
 
     register_nav_menu('header-menu', 'Header Menu: Home Base');
     register_nav_menu('primary-navigation', 'Primary Navigation Menu: Spheres');
+    register_nav_menu('secondary-navigation','Secondary Navigation Menu: Spheres');
 }
 
 add_action('after_setup_theme', 'afterschool_theme_setup');

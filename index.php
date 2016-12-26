@@ -1,4 +1,5 @@
 <?php get_header();?>
+<?php wp_nav_menu(array('theme_location'=>'secondary-navigation')); ?>
 <?php wp_nav_menu(array('theme_location'=>'header-menu')) ?>
 <?php wp_nav_menu(array('theme_location'=>'primary-navigation')); ?>
   <?php if( have_posts() ):

@@ -1,4 +1,5 @@
 <?php get_header();?>
+<?php wp_nav_menu(array('theme_location'=>'secondary-navigation')); ?>
 <?php wp_nav_menu(array('theme_location'=>'header-menu')) ?>
 <?php wp_nav_menu(array('theme_location'=>'primary-navigation')); ?>
   <?php if( have_posts() ):
@@ -16,7 +17,7 @@
                       <p class="article-content-container"><?php the_content();?></p>
                     </div>
                   </div>
-                <small>post date: <?php the_time('F j, Y');//F j, Y specifies format ?> in <?php the_category();?></small>
+
             <?php endwhile;
 
         endif;
@@ -26,6 +27,17 @@
       var activeSphere = $('#menu-item-54');
       $(document).ready(function(){
           activeSphere.css({"background-color":"#EA8D79"});
+          var secondaryNav = $('.menu-secondary-navigation-container');
+          secondaryNav.hide();
+          $(document).scroll(function(){
+            var position = $(this).scrollTop();
+            var passPoint = $('.menu-primary-navigation-container').position();
+            if (position > passPoint.top) {
+              secondaryNav.fadeIn("slow");
+            } else {
+              secondaryNav.fadeOut("fast");
+            }
+          });
       });
     });
   </script>
