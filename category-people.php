@@ -35,7 +35,7 @@
 </div>
   <script>
     jQuery(function($) {
-      var activeSphere = $('#menu-item-54');
+      var activeSphere = $('#menu-item-108');
       $(document).ready(function(){
           activeSphere.css({"background-color":"#EA8D79"});
           var secondaryNav = $('.menu-secondary-navigation-container');

@@ -415,6 +415,42 @@ GRID STYLING
   -webkit-transition: ease-in-out .4s;
   opacity: .8;
 }
+
+/*
+CATEGORY GRID
+===========================================
+*/
+.category-article-container img {
+  width:100%;
+  height: auto;
+  -webkit-transition: ease .4s;
+}
+.category-article-container img:hover {
+  opacity: .8;
+}
+.category-article-info-container {
+  padding-bottom:1em;
+  padding-left: .4em;
+}
+.category-article-title-container a {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: black;
+  font-size: 1.5em;
+  text-decoration: none;
+  -webkit-transition: ease .3s;
+}
+.category-article-title-container a:hover {
+  color: #726c5e;
+}
+.category-article-date-container {
+  font-family: ministry, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  text-decoration: none;
+  color: #726c5e;
+}
+
 /*
 FLEX ATTEMPT
 =============================================
@@ -455,8 +491,47 @@ footer {
   width: 100%;
   height: 200px;
   background-color:#292930;
+  text-align:center;
 }
-
+footer h2 {
+  color: white;
+  display:block;
+  margin:0 auto;
+  font-family: 'Times New Roman';
+  font-style: italic;
+  font-style: bold;
+  padding-top: 2.5em;
+}
+/*
+WRITING ARTICLE STYLING IFRAME
+*/
+.article-container-writing {
+  text-align:center;
+  padding-bottom: 1em;
+}
+.article-author-container-writing {
+  font-family: 'MontrealRegular';
+  font-weight: normal;
+  font-style: normal;
+  text-align: right;
+  padding-bottom: 0;
+  padding-right: 20%;
+  padding-top: 2em;
+}
+iframe {
+  padding-top: 0;
+  margin: 0 auto;
+  width: 80%;
+  height: 800px;
+  border-style:none;
+}
+/*
+Writing Category Styling
+*/
+.article-content-container-writing {
+  width: 100%;
+}
+.
 /*
 Single Article Format Styling
 ===============================================
@@ -519,7 +594,10 @@ Single Article Format Styling
   width: 100%;
   margin: 0 auto;
 }
-.
+.article-content img {
+  width: 100%;
+  height: auto;
+}
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */

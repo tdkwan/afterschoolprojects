@@ -70,7 +70,7 @@
             </a>
           </div>
           <div class="grid-article-content">
-            <p>Vance Creek Bridge is one of those places where you don't believe it actually exists until you feel it beneath your shoes.
+            <p>Look closely enough and see the inherent joy that can be found in every kid across the globe.
             </p>
           </div>
           <div class="article-author">

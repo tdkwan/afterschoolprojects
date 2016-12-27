@@ -8,12 +8,12 @@
                 <!--We can create our own template files for all types of content using php
                   using get_template_part('content',get_post_format()); searches for content-'aside''gallery' etc to generate
                   a custom content template type !-->
-                  <div class="article-container">
-                    <div class="article-title-container">
-                      <h1 class="article-title"><?php the_title(); ?></h1>
-                    </div>
+                  <div class="article-container-writing">
                     <div class="article-content-container-writing">
                       <p class="article-content-container"><?php the_content();?></p>
+                    </div>
+                    <div class="article-author-container-writing">
+                      Written By: <?php the_title();?>
                     </div>
                   </div>
             <?php endwhile;
