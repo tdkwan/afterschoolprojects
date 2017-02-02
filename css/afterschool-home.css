@@ -26,6 +26,11 @@ p {
    font-weight: normal;
    font-style: normal;
 }
+{
+  font-family: lust, serif;
+  font-style: normal;
+  font-weight: 400;
+}
 */
 html,
 body {
@@ -46,26 +51,112 @@ p {
 MEET US PAGE STYLING
 ===========================
 */
+.mission-statement-container {
+  display:block;
+  position:relative;
+  width: 100%;
+  max-height:26em;
+  background-color: black;
+  text-align:center;
+  overflow:hidden;
+}
+.mission-statement-container img {
+  width: 100%;
+}
+.dark-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position:absolute;
+  opacity:0;
+  -webkit-transition: ease-in-out .3s;
+}
+.mission-statement-container:hover > .dark-overlay{
+  opacity:.5;
+}
+.mission-statement-description-container {
+  padding-top: 1.25em;
+  padding-bottom: 3em;
+  width: 100%;
+  text-align:left;
+  position: absolute;
+  top:.5em;
+  color: white;
+}
+.mission-statement-description-container h1{
+  font-family:ministry, sans-serif;
+}
+.mission-statement-description-container h1{
+  width: 100%;
+  text-align: center;
+  display:block;
+  margin: 0 auto;
+  line-height:2;
+}
+.mission-statement-description-container p {
+  font-size: .8em;
+  width: 80%;
+  display:block;
+  margin: 0 auto;
+  line-height: 2;
+}
+.meet-us-team-container {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+.meet-us-team-container h1{
+  font-family:ministry, sans-serif;
+}
+.meet-us-team-container h1{
+  width: 100%;
+  text-align: center;
+  display:block;
+  margin: 0 auto;
+  line-height:2;
+}
 .meet-us-author-container {
+  background-color: white;
+  position:relative;
   padding-top: 1em;
   padding-bottom: 2em;
 }
-.meet-us-author-container .meet-us-author-img img {
+.meet-us-author-content {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.meet-us-author-container .meet-us-author-content img {
   width: 100%;
+  border-right: none;
   height: auto;
 }
-.meet-us-author-container hr {
-  width: 90%;
+.meet-us-author-img {
+  overflow:hidden;
 }
-.meet-us-author-text-name {
+.meet-us-author-content{
+  padding-right:.5em;
+  padding-left:.5em;
+  text-align:center;
+  padding-top: 1em;
+}
+.meet-us-author-content-name {
+  text-transform: uppercase;
   padding-top: .5em;
+  margin:0 auto;
   font-family: ministry, sans-serif;
   font-style:bold;
   text-transform: uppercase;
 }
-.meet-us-author-text-bio {
-
+.meet-us-author-content-description {
+  padding-top: 1.5em;
+  text-align: left;
+  padding-left:.5em;
+  padding-right:.5em;
 }
+.meet-us-author-content-description p{
+  text-align:left;
+}
+
+
 /*
 Writing Page Styling
 ============================
@@ -98,8 +189,8 @@ ARTICLE STYLING
   text-align:center;
 }
 .article-title-container h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight:bold;
+  font-family: lust, serif;
+  font-style: normal;
   margin: 0 auto;
   padding-bottom:;
 }
@@ -173,28 +264,28 @@ for use on all sphere pages:
 
 #menu-header-menu {
   padding-top: 1em;
-  padding-left :1em;
+  padding-left:1em;
   list-style-type:none;
   overflow:hidden;
 }
 
 #menu-header-menu li {
-  padding: 1em;
+  color:white;
   float:left;
 }
 #menu-header-menu a {}
 #menu-header-menu .menu-item-147 {
-  float:right;
-  padding-right: 5%;
+  float:left;
+  padding-right:.5em;
 }
 /*SOCIAL MEDIA*/
 #menu-header-menu .menu-item-74 {
-  float:right;
-  padding-right: 5%;
+  float:left;
+  padding-right: 2%;
 }
 #menu-header-menu .menu-item-75{
-  float:right;
-  padding-right: 8%;
+  float:left;
+  padding-right: 2%;
 }
 #menu-header-menu img {
   height: 18px;
@@ -206,20 +297,17 @@ for use on all sphere pages:
 }
 #menu-header-menu a {
   font-family: ministry, sans-serif;
-  text-transform: uppercase;
   font-style: normal;
   display: inline-block;
   color: black;
   text-align: center;
   text-decoration: none;
   transition: 0.3s;
-  font-size: 17px;
-  -webkit-transition: ease- .7s;
+  font-size: 1.2em;
+  -webkit-transition: ease-in-out .3s;
 }
 #menu-header-menu li a:hover {
-  -webkit-transition: ease .7s;
-  border-bottom: solid 1px black;
-  border-bottom-transition:
+  opacity: .5;
 }
 
 /*SPHERE MENU
@@ -327,30 +415,45 @@ SECONDARY SPHERE MENU
 */
 
 .home-logo-container {
+  position:relative;
   text-align: center;
   width: 100%;
-  padding-left: 40%;
-  padding-right: 40%;
   padding-bottom: 1%;
+  max-height: 25em;
+  overflow: hidden;
 }
 
 .home-logo {
+  text-align:center;
+  width: 20em;
+  top: 2.5em;
+  position:absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  font-family: 'Times New Roman';
+  font-style: italic;
+  font-style: bold;
+  color: white;
+}
+.home-logo-container img {
+  display:block;
+  width: 100%;
   margin: 0 auto;
 }
-
-.home-logo img {
-  width: 100%;
+.home-logo-container:hover > .dark-overlay{
+  opacity:.5;
 }
 /*HOME--FRONT PAGE ISOTOPE GRID LAYOUT
 =============================================
   for use on the front page
 */
 #grid {
-  width: 100%;
-  margin-left: 2%
+  width: 98%;
+  margin-left: 1%
 }
 .grid-sizer {
-  width: 20%;
+  width: 10%;
 }
 .grid-featured {
   width: 100%;
@@ -367,10 +470,10 @@ SECONDARY SPHERE MENU
   float: left;
 }
 .grid-tall {
-  width: 20%;
+  width: 40%;
 }
 .grid-wide {
-  width: 80%;
+  width: 60%;
 }
 .grid-item img {
   width: 100%;
@@ -381,34 +484,53 @@ GRID STYLING
 =========================
 */
 .post-text-container a {
-  font-family: ministry, sans-serif;
-  font-style: normal;
-  font-weight: 100;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-weight: 400;
   text-decoration: none;
-  color: #726c5e;
+  color: black;
 }
-.post-text-container .article-name h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+.grid-item .post-text-container .sphere-name{
+  text-transform: uppercase;
+  font-size: .8em;
+  padding-bottom: .4em;
+}
+.post-text-container .article-name h2 {
+  padding-top: .15em;
+  font-family: 'lust', serif;
+  font-style: normal;
   text-decoration:none;
   color: black;
   -webkit-transition: ease-in-out .2s;
+  padding-bottom: 0;
 }
-.post-text-container .article-name h3:hover {
+.post-text-container .article-name h2:hover {
   color: #726c5e;
 }
 .post-text-container {
   padding-top: 10px;
 }
-.post-text-container p {
-  padding-bottom: 4px;
+.grid-item .post-text-container p {
+  padding: 0;
+}
+.grid-item .article-name h2 {
+  padding: 0;
+  margin: 0;
 }
 .post-text-container .article-author a {
-  font-family: ministry, sans-serif;
-  font-style: normal;
-  font-weight: 100;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
   text-decoration: none;
-  color: #726c5e;
+  font-size: .8em;
+}
+.grid-item .post-text-container .grid-article-content p {
+  font-family: "ministry",sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: .8em;
+  padding-top: .1em;
+  padding-bottom: .1em;
+  padding-right: 35%;
 }
 
 .grid-item img:hover{
@@ -420,6 +542,10 @@ GRID STYLING
 CATEGORY GRID
 ===========================================
 */
+.category-main-container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
 .category-article-container img {
   width:100%;
   height: auto;
@@ -433,8 +559,8 @@ CATEGORY GRID
   padding-left: .4em;
 }
 .category-article-title-container a {
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  font-family: lust, serif;
+  font-style: normal;
   color: black;
   font-size: 1.5em;
   text-decoration: none;
@@ -446,7 +572,7 @@ CATEGORY GRID
 .category-article-date-container {
   font-family: ministry, sans-serif;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
   text-decoration: none;
   color: #726c5e;
 }
@@ -539,6 +665,17 @@ Single Article Format Styling
 .article-container {
 
 }
+.article-dark-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position:absolute;
+  -webkit-transition: ease-in-out .3s;
+  opacity:.5;
+}
+.article-featured-img-container:hover > .article-dark-overlay{
+  opacity:.3;
+}
 .article-featured-img-container {
   width: 100%;
   position:relative;
@@ -555,21 +692,21 @@ Single Article Format Styling
 .article-featured-img-container img:hover {
   opacity:.8;
 }
-.article-featured-title {
-  line-height: 1;
-  color: white;
-  width: 100%;
-  font-family: 'MontrealRegular';
-  font-weight: normal;
-  font-style:bold;
-  text-transform: uppercase;
-  padding-left: 2em;
-  font-size: 2em;
-  display:block;
+.article-featured-title-container {
   position:absolute;
-  left:0;
-  bottom:0;
-  padding-bottom: .4em;
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding-top: 20%;
+  text-align:center;
+}
+.article-featured-title-container h1 {
+  margin:0 auto;
+  font-size: 3em;
+  font-family: lust, serif;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
 }
 
 .article-content-container {
@@ -598,20 +735,43 @@ Single Article Format Styling
   width: 100%;
   height: auto;
 }
+/*VIDEO POSTS
+===================================================
+*/
+.single-format-video .article-container {
+  width: 100%;
+}
+.single-format-video .article-content {
+  width: 80% !important;
+  height: auto;
+}
+
+/*CATEGORY-MEET-US-
+==================================================
+*/
+
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .grid-tall {
-      width: 100%;
-    }
-    .grid-tall img {
-      width: 30%;
-    }
-    .grid-wide {
-      width: 100%;
-    }
-}
+/*Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .grid-wide {
+  }
+  .grid-tall {
+  }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+ }

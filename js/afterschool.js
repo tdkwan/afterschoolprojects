@@ -1,7 +1,6 @@
 jQuery(function($) {
       var $container = $('#grid');
 
-
       $container.isotope({
         itemSelector: '.grid-item',
         percentPosition: true,
@@ -11,7 +10,9 @@ jQuery(function($) {
 
         }
       });
-
+      $container.imagesLoaded().progress( function() {
+      $container.isotope('layout');
+});
         $(document).ready(function(){
           var navbar = $('.menu-primary-navigation-container');
           $(window).scroll(function(){

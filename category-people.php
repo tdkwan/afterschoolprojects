@@ -9,7 +9,7 @@
                 <!--We can create our own template files for all types of content using php
                   using get_template_part('content',get_post_format()); searches for content-'aside''gallery' etc to generate
                   a custom content template type !-->
-                  <div class="col-xs-12 col-md-4 category-article-container">
+                  <div class="col-xs-12 col-md-12 col-lg-4 category-article-container">
                     <a href="<?php echo get_permalink();?>">
                       <?php the_post_thumbnail(); ?>
                     </a>
