@@ -2,36 +2,48 @@
 <?php wp_nav_menu(array('theme_location'=>'secondary-navigation')); ?>
 <?php wp_nav_menu(array('theme_location'=>'header-menu')) ?>
 <?php wp_nav_menu(array('theme_location'=>'primary-navigation')); ?>
-<div class="row">
+<div class="category-header-container">
+    <img src="http://localhost:8888/wordpress-asp/wp-content/uploads/2017/02/IMG_6274-e1486886062230.jpg">
+    <div class="category-header-title-container">
+        <h1>People</h1>
+        <h6>You are people, I am people.</h6>
+    </div>
+</div>
+<div class="category-spacer">
+</div>
+<div class="row category-main-container">
+    <div id="grid" class="category-grid">
   <?php if( have_posts() ):
     //Built in function have_posts (has blog posts, pages, etc.)
             while( have_posts() ): the_post(); ?>
                 <!--We can create our own template files for all types of content using php
                   using get_template_part('content',get_post_format()); searches for content-'aside''gallery' etc to generate
                   a custom content template type !-->
-                  <div class="col-xs-12 col-md-12 col-lg-4 category-article-container">
-                    <a href="<?php echo get_permalink();?>">
-                      <?php the_post_thumbnail(); ?>
-                    </a>
-                    <div class="category-article-info-container">
-                      <div class="category-article-title-container">
+
+                    <div class="grid-sizer category-grid-sizer"></div>
+                    <div class="grid-item category-grid-item">
                         <a href="<?php echo get_permalink();?>">
-                        <?php the_title(); ?>
+                        <div class="category-overlay-container">
+                            <h3 class="category-overlay-title">
+                                <?php the_title(); ?>
+                            </h3>
+                        </div>
+                            <?php if (class_exists('MultiPostThumbnails')) :
+                                    MultiPostThumbnails::the_post_thumbnail(
+                                        get_post_type(),
+                                        'secondary-image'
+                                    );
+                                endif; ?>
                         </a>
-                      </div>
-                      <div class="category-article-date-container">
-                        <?php the_time('F Y');//F j, Y specifies format ?>
-                      </div>
-                      <div class="category-article-excerpt-container">
-                        <?php the_excerpt();?>
-                      </div>
                     </div>
-                  </div>
+
+
 
             <?php endwhile;
 
         endif;
   ?>
+    </div>
 </div>
   <script>
     jQuery(function($) {

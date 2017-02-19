@@ -26,22 +26,22 @@
 
       <div class="grid-item grid-tall">
         <a href="#">
-          <img class="grid-item-photo" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2016/12/IMG_0217.jpg">
+          <img class="grid-item-photo" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2017/02/1D4A1360.jpg">
         </a>
         <div class="post-text-container">
           <div class="sphere-name">
-            <a href="http://localhost:8888/wordpress-asp/category/photosvids/">Visuals</a>
+            <a href="http://localhost:8888/wordpress-asp/category/photosvids/">Visuals, Discover</a>
           </div>
           <div class="article-name">
             <a href="http://localhost:8888/wordpress-asp/category/photosvids/">
-              <h2 class="article-name-word">Home defined:</h2>
+              <h2 class="article-name-word">An Outsider's Perspective: Israel-Palestine</h2>
             </a>
           </div>
           <div class="grid-article-content">
-            <p>Home by definition is relative, sometimes it's a state of mind, sometimes it's a place...</p>
+            <p>We spend so much time in adversity; we are unwilling to confront the validity in the opinions of people who don’t share our world views.</p>
           </div>
           <div class="article-author">
-            <a href="#">Timothy Kwan</a>
+            <a href="#">Lauren Kim</a>
           </div>
         </div>
       </div>
@@ -109,6 +109,7 @@
 !-->
 <script>
 //small fade in menu after scroll
+
   jQuery(function($) {
     $(document).ready(function(){
         var secondaryNav = $('.menu-secondary-navigation-container');

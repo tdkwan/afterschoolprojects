@@ -11,6 +11,15 @@ function afterschool_script_enqueue() {
 
 add_action('wp_enqueue_scripts', 'afterschool_script_enqueue'); //wp_enqueue_scripts is the 'moment' when Wordpress enqueues all scripts, it is passed the function to run
 
+if (class_exists('MultiPostThumbnails')) {
+    new MultiPostThumbnails(
+        array(
+            'label' => 'Secondary Image',
+            'id' => 'secondary-image',
+            'post_type' => 'post'
+        )
+    );
+}
 
 function afterschool_theme_setup() {
     add_theme_support('menus');

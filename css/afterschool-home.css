@@ -40,6 +40,9 @@ p {
   font-family: 'Libre Baskerville', serif;
   font-size: .75em;
 }
+strong {
+  font-style: bold;
+}
 
 #grid img{
   -webkit-transition: ease-in-out .3s;
@@ -69,7 +72,7 @@ MEET US PAGE STYLING
   background-color: black;
   position:absolute;
   opacity:0;
-  -webkit-transition: ease-in-out .3s;
+  -webkit-transition: ease-in-out .2s;
 }
 .mission-statement-container:hover > .dark-overlay{
   opacity:.5;
@@ -195,27 +198,6 @@ ARTICLE STYLING
   padding-bottom:;
 }
 
-.article-content-container {
-  font-family: "Times New Roman",serif;
-  font-style: italic;
-  text-align: center;
-}
-.article-content-container-small p {
-  margin: 0 auto;
-  padding-top: .8em;
-  width: 40%;
-  padding-bottom: 1.5em;
-}
-.article-content-container-writing {
-  font-family: "Times New Roman",serif;
-  font-style: normal !important;
-  text-align: left;
-  margin: 0 auto;
-  width: 70%;
-  display:block;
-}
-.article-content-container-writing p {
-}
 
 hr {
   width: 40%;
@@ -228,28 +210,11 @@ hr {
 GALLERY
 ===============
 */
-  .gallery {
-    padding-bottom: 1.5em;
-  }
-	#gallery-1 {
-    padding-left: 2%;
-    padding-right: 2%;
-		margin: auto;
-	}
-	#gallery-1 .gallery-item {
-    padding: 5px 5px 5px 5px;
-		float: left;
-		margin-top: 10px;
-		text-align: center;
-		width: 33%;
-	}
-	#gallery-1 img {
+.gallery .gallery-item img {
+    padding: 0em .6em 0em .6em;
     width: 100%;
     height: auto;
 		border: 0 !important;
-	}
-	#gallery-1 .gallery-caption {
-		margin-left: 0;
 	}
 		/* see gallery_shortcode() in wp-includes/media.php */
 
@@ -466,7 +431,7 @@ SECONDARY SPHERE MENU
 }
 
 .grid-item {
-  padding: 10px 10px 10px 10px;
+  padding: 1em 1.5em 1em 1.5em;
   float: left;
 }
 .grid-tall {
@@ -491,7 +456,6 @@ GRID STYLING
   color: black;
 }
 .grid-item .post-text-container .sphere-name{
-  text-transform: uppercase;
   font-size: .8em;
   padding-bottom: .4em;
 }
@@ -514,7 +478,8 @@ GRID STYLING
   padding: 0;
 }
 .grid-item .article-name h2 {
-  padding: 0;
+  padding-top: .2em;
+  padding-bottom: .2em;
   margin: 0;
 }
 .post-text-container .article-author a {
@@ -528,8 +493,8 @@ GRID STYLING
   font-style: normal;
   font-weight: 300;
   font-size: .8em;
-  padding-top: .1em;
-  padding-bottom: .1em;
+  padding-top: 0;
+  padding-bottom: .3em;
   padding-right: 35%;
 }
 
@@ -542,6 +507,84 @@ GRID STYLING
 CATEGORY GRID
 ===========================================
 */
+.category-header-container {
+    position:relative;
+    text-align: center;
+    width: 100%;
+    max-height: 15em;
+    overflow: hidden;
+}
+
+.category-header-container img {
+    display:block;
+    width: 100%;
+    margin: 0 auto;
+}
+.category-header-title-container {
+    text-align:center;
+    width: 20em;
+    top: 30%;
+    position:absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+.category-header-title-container h1 {
+    font-family: 'lust';
+    font-style: regular;
+    color: white;
+    font-size: 3.5em;
+}
+.category-header-title-container h6 {
+    margin: 0 auto;
+    color: white;
+    font-style: normal;
+    font-weight: 300;
+}
+.category-spacer {
+    height: 1em;
+}
+.category-grid {
+    width: 100%;
+}
+.category-grid-sizer {
+    width: 10%;
+}
+.category-overlay-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: white;
+    -webkit-transition: ease .2s;
+    opacity: 0;
+    text-align: center;
+    padding-top: 27%;
+    padding-right: 1em;
+}
+.category-overlay-container h3 {
+    font-family: 'lust',serif;
+    margin: 0 auto;
+}
+.category-overlay-container .entry-subtitle {
+    font-family: ministry, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+.category-grid-item a:hover > .category-overlay-container {
+    opacity:1;
+}
+.category-grid-item a:hover > .category-grid-item img {
+    opacity:.5;
+}
+.category-grid-item {
+    padding: 1em 1em 1em 1em;
+    width: 50%;
+}
+.category-grid-item img {
+    width: 100%;
+    height: auto;
+    -webkit-transition: ease .2s;
+}
 .category-main-container {
   padding-left: 1em;
   padding-right: 1em;
@@ -674,11 +717,16 @@ Single Article Format Styling
   opacity:.5;
 }
 .article-featured-img-container:hover > .article-dark-overlay{
-  opacity:.3;
+  opacity:.1;
 }
 .article-featured-img-container {
-  width: 100%;
+  display:block;
   position:relative;
+  width: 100%;
+  max-height:30em;
+  background-color: black;
+  text-align:center;
+  overflow:hidden;
 }
 .article-featured-img-container img {
   width: 100%;
@@ -693,36 +741,50 @@ Single Article Format Styling
   opacity:.8;
 }
 .article-featured-title-container {
-  position:absolute;
-  color: white;
-  height: 100%;
+  padding-top: 10em;
+  padding-bottom: 3em;
   width: 100%;
-  padding-top: 20%;
-  text-align:center;
+  text-align:left;
+  position: absolute;
+  top:.5em;
+  color: white;
 }
 .article-featured-title-container h1 {
-  margin:0 auto;
+  width: 100%;
+  text-align: center;
+  display:block;
+  margin: 0 auto;
+  line-height:2;
+  position:absolute;
+  font-family: 'lust',serif;
   font-size: 3em;
-  font-family: lust, serif;
-  font-style: normal;
-  font-weight: 400;
-  color: white;
+}
+.article-featured-title-container h1 .entry-subtitle{
+    font-family: 'ministry', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: .4em;
+    color: #EA8D79;
 }
 
 .article-content-container {
   width: 100%;
-  padding-top: 1em;
+  padding-top: 1.5em;
   text-align: center;
 }
-.article-content {
+.article-content-container p {
+  margin-bottom: 1.5em;
+}
+.article-content-container p {
   font-family: 'Libre Baskerville', serif;
   font-style: normal;
+  font-size: .7em;
   text-align: left;
-  line-height: 2;
-  width: 60%;
+  line-height: 2.3;
+  width: 50%;
   margin: 0 auto;
 }
-.article-content ul{
+.article-content-container ul{
   font-family: 'Libre Baskerville', serif;
   font-size: .75em;
   font-style: normal;
@@ -740,31 +802,194 @@ Single Article Format Styling
 */
 .single-format-video .article-container {
   width: 100%;
+  text-align:center;
 }
-.single-format-video .article-content {
+.article-video-content-spacer {
+    height: 5em;
+}
+.article-video-featured-img-container img {
+    width: 100%;
+    height: auto;
+}
+.single-format-video .article-video-content {
   width: 80% !important;
   height: auto;
+  margin: 0 auto;
 }
 
 /*CATEGORY-MEET-US-
 ==================================================
 */
 
+/*FOOTER STYLES
+=====================================================
+*/
+footer {
+    height: 14em;
+}
+.logo-container-centered {
+    padding-top: 2em;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.logo-centered-small {
+    width: 15%;
+    display: block;
+    margin: 0 auto;
+}
+.logo-centered-small img {
+    width: 100%;
+    height: auto;
+}
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
 /*Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
+*/
+@media (min-width: 0px) {
+    .category-grid-item {
+        width: 100%;
+    }
+    .grid-wide{
+        width: 100%;
+    }
+    .grid-tall{
+        width: 100%;
+    }
+    .article-featured-title-container {
+      padding-top: 1em;
+      padding-bottom: 3em;
+      width: 100%;
+      text-align:left;
+      position: absolute;
+      top:.5em;
+      color: white;
+    }
+    .article-content-container {
+      width: 100%;
+      padding-top: 1.5em;
+      text-align: center;
+    }
+    .article-content-container p {
+      margin-bottom: 1.5em;
+    }
+    .article-content-container p {
+      font-family: 'Libre Baskerville', serif;
+      font-style: normal;
+      font-size: .7em;
+      text-align: left;
+      line-height: 2.3;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .article-content-container ul{
+      font-family: 'Libre Baskerville', serif;
+      font-size: .75em;
+      font-style: normal;
+      text-align: left;
+      line-height: 2;
+      width: 100%;
+      margin: 0 auto;
+    }
 
-// Small devices (landscape phones, 576px and up)*/
+}
+/*SMALL DEVICES*/
 @media (min-width: 576px) {
+    .category-grid-item {
+        width: 100%;
+    }
+    .grid-wide{
+        width: 100%;
+    }
+    .grid-tall{
+        width: 100%;
+    }
+    .article-featured-title-container {
+      padding-top: 4em;
+      padding-bottom: 3em;
+      width: 100%;
+      text-align:left;
+      position: absolute;
+      top:.5em;
+      color: white;
+    }
+    .article-content-container {
+      width: 100%;
+      padding-top: 1.5em;
+      text-align: center;
+    }
+    .article-content-container p {
+      margin-bottom: 1.5em;
+    }
+    .article-content-container p {
+      font-family: 'Libre Baskerville', serif;
+      font-style: normal;
+      font-size: .7em;
+      text-align: left;
+      line-height: 2.3;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .article-content-container ul{
+      font-family: 'Libre Baskerville', serif;
+      font-size: .75em;
+      font-style: normal;
+      text-align: left;
+      line-height: 2;
+      width: 100%;
+      margin: 0 auto;
+    }
  }
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+  .category-grid-item {
+      width: 50%;
+  }
+  .category-grid {
+  }
   .grid-wide {
+      width: 60%;
   }
   .grid-tall {
+      width: 40%;
+  }
+  .article-featured-title-container {
+    padding-top: 10em;
+    padding-bottom: 3em;
+    width: 100%;
+    text-align:left;
+    position: absolute;
+    top:.5em;
+    color: white;
+  }
+  .article-content-container {
+    width: 100%;
+    padding-top: 1.5em;
+    text-align: center;
+  }
+  .article-content-container p {
+    margin-bottom: 1.5em;
+  }
+  .article-content-container p {
+    font-family: 'Libre Baskerville', serif;
+    font-style: normal;
+    font-size: .7em;
+    text-align: left;
+    line-height: 2.3;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .article-content-container ul{
+    font-family: 'Libre Baskerville', serif;
+    font-size: .75em;
+    font-style: normal;
+    text-align: left;
+    line-height: 2;
+    width: 100%;
+    margin: 0 auto;
   }
  }
 
