@@ -442,8 +442,12 @@ SECONDARY SPHERE MENU
 }
 .grid-item img {
   width: 100%;
+  height: auto;
 }
-
+.article-name-word .entry-subtitle {
+    visibility: hidden;
+    display: none;
+}
 /*
 GRID STYLING
 =========================
@@ -969,6 +973,9 @@ footer {
     width: 100%;
     padding-top: 1.5em;
     text-align: center;
+  }
+.article-aside-container iframe {
+      width: 100%;
   }
   .article-content-container p {
     margin-bottom: 1.5em;

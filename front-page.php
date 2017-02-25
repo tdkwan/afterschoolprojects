@@ -20,10 +20,93 @@
     </div>
   </div>
   <?php wp_nav_menu(array('theme_location'=>'primary-navigation')); ?>
+
     <!--ISOTOPE GRID INTRO PAGE!-->
     <div id="grid">
       <div class="grid-sizer"></div>
+      <?php if( have_posts() ):
+        //Built in function have_posts (has blog posts, pages, etc.)
+                while( have_posts() ): the_post(); ?>
+                    <!--We can create our own template files for all types of content using php
+                      using get_template_part('content',get_post_format()); searches for content-'aside''gallery' etc to generate
+                      a custom content template type !-->
 
+      <?php //determines if the code is wide or tall on the front page, determined by the post tags. (add label grid-tall)
+      if ($all_the_tags);
+      $all_the_tags = get_the_tags();
+      foreach($all_the_tags as $this_tag) {
+      	if ($this_tag->name == "grid-tall" ) {
+      ?>
+      <div class="grid-item grid-tall">
+        <a href="<?php echo get_permalink();?>">
+            <?php if (class_exists('MultiPostThumbnails')) :
+                    MultiPostThumbnails::the_post_thumbnail(
+                        get_post_type(),
+                        'secondary-image'
+                    );
+                endif; ?>
+        </a>
+        <div class="post-text-container">
+            <div class="sphere-name">
+                <?php $category_list = get_the_category_list(', ', 'multiple', false);
+                echo $category_list;
+                ?>
+            </div>
+          <div class="article-name">
+            <a href="<?php echo get_permalink();?>">
+              <h2 class="article-name-word"><?php the_title();?></h2>
+            </a>
+          </div>
+          <div class="grid-article-content">
+            <p><?php the_excerpt();?></p>
+          </div>
+          <div class="article-author">
+            <a href="#"><?php the_author(); ?></a>
+          </div>
+        </div>
+      </div>
+      <?php 	} else if ($this_tag->name == "grid-wide" ) { ?>
+          <div class="grid-item grid-wide">
+            <a href="<?php echo get_permalink();?>">
+                <?php if (class_exists('MultiPostThumbnails')) :
+                        MultiPostThumbnails::the_post_thumbnail(
+                            get_post_type(),
+                            'secondary-image'
+                        );
+                    endif; ?>
+            </a>
+            <div class="post-text-container">
+                <div class="sphere-name">
+                    <?php $category_list = get_the_category_list(', ', 'multiple', false);
+                    echo $category_list;
+                    ?>
+                </div>
+              <div class="article-name">
+                <a href="<?php echo get_permalink();?>">
+                  <h2 class="article-name-word"><?php the_title();?></h2>
+                </a>
+              </div>
+              <div class="grid-article-content">
+                <p><?php the_excerpt();?></p>
+              </div>
+              <div class="article-author">
+                <a href="#"><?php the_author(); ?></a>
+              </div>
+            </div>
+          </div>
+      <?php 	} else {
+      		// it's neither, do nothing
+      ?>
+      		<!-- not tagged as one or the other -->
+      <?
+      	}
+      }
+
+      ?>
+  <?php endwhile;
+
+endif;
+?>
       <div class="grid-item grid-tall">
         <a href="#">
           <img class="grid-item-photo" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2017/02/1D4A1360.jpg">
@@ -93,6 +176,7 @@
         </div>
       </div>
     </div>
+
 <!--
   <div class="front-page-flex container">
     <div class="flex-item-featured">

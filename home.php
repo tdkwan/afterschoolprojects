@@ -2,7 +2,6 @@
   <?php wp_nav_menu(array('theme_location'=>'secondary-navigation')); ?>
   <?php wp_nav_menu(array('theme_location'=>'header-menu')) ?>
   <div class="home-logo-container">
-      home.php
     <div class="dark-overlay"></div>
     <img class="main-logo-background" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2017/01/IMG_3221-min.jpg">
     <div class="home-logo">
