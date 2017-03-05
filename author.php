@@ -49,7 +49,6 @@
     jQuery(function($) {
       var activeSphere = $('#menu-item-92');
       $(document).ready(function(){
-          activeSphere.css({"background-color":"#EA8D79"});
           var secondaryNav = $('.menu-secondary-navigation-container');
           secondaryNav.hide();
           $(document).scroll(function(){

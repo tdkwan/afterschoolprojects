@@ -18,3 +18,4 @@
     endif;
   ?>
   <body <?php body_class($afterschool_classes)?>>
+     <?php include_once("analyticstracking.php") ?>

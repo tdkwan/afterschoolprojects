@@ -32,9 +32,9 @@
                       a custom content template type !-->
 
       <?php //determines if the code is wide or tall on the front page, determined by the post tags. (add label grid-tall)
+        $all_the_tags = get_the_tags();
       if ($all_the_tags);
-      $all_the_tags = get_the_tags();
-      foreach($all_the_tags as $this_tag) {
+      foreach ($all_the_tags as $this_tag) {
       	if ($this_tag->name == "grid-tall" ) {
       ?>
       <div class="grid-item grid-tall">
@@ -61,7 +61,7 @@
             <p><?php the_excerpt();?></p>
           </div>
           <div class="article-author">
-            <a href="#"><?php the_author(); ?></a>
+            <?php the_author_posts_link();?>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@
                 <p><?php the_excerpt();?></p>
               </div>
               <div class="article-author">
-                <a href="#"><?php the_author(); ?></a>
+                <?php the_author_posts_link();?>
               </div>
             </div>
           </div>
@@ -107,74 +107,6 @@
 
 endif;
 ?>
-      <div class="grid-item grid-tall">
-        <a href="#">
-          <img class="grid-item-photo" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2017/02/1D4A1360.jpg">
-        </a>
-        <div class="post-text-container">
-          <div class="sphere-name">
-            <a href="http://localhost:8888/wordpress-asp/category/photosvids/">Visuals, Discover</a>
-          </div>
-          <div class="article-name">
-            <a href="http://localhost:8888/wordpress-asp/category/photosvids/">
-              <h2 class="article-name-word">An Outsider's Perspective: Israel-Palestine</h2>
-            </a>
-          </div>
-          <div class="grid-article-content">
-            <p>We spend so much time in adversity; we are unwilling to confront the validity in the opinions of people who don’t share our world views.</p>
-          </div>
-          <div class="article-author">
-            <a href="#">Lauren Kim</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid-item grid-wide">
-        <a href="http://localhost:8888/wordpress-asp/photosvids/thailands-youth/">
-          <img class="grid-item-photo" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2017/01/IMG_1429_front.jpg">
-        </a>
-        <div class="post-text-container">
-          <div class="sphere-name">
-            <a href="http://localhost:8888/wordpress-asp/category/photosvids/">Visuals</a>
-          </div>
-          <div class="article-name">
-            <a href="http://localhost:8888/wordpress-asp/photosvids/thailands-youth/">
-              <h2 class="article-name-word">Thailand's Youth</h2>
-            </a>
-          </div>
-          <div class="grid-article-content">
-            <p>Look closely enough and see the inherent joy that can be found in every kid across the globe.
-            </p>
-          </div>
-          <div class="article-author">
-            <a href="#">Aidan Galassetti, 29 January 2017</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid-item grid-wide">
-        <a href="http://localhost:8888/wordpress-asp/discover/vance-creek-bridge/">
-          <img class="grid-item-photo" src="http://localhost:8888/wordpress-asp/wp-content/uploads/2017/01/IMG_9430_front.jpg">
-        </a>
-        <div class="post-text-container">
-          <div class="sphere-name">
-            <a href="http://localhost:8888/wordpress-asp/category/discover/">Discover</a>
-          </div>
-          <div class="article-name">
-            <a href="http://localhost:8888/wordpress-asp/discover/vance-creek-bridge/">
-              <h2 class="article-name-word">Vance Creek Bridge</h2>
-            </a>
-          </div>
-          <div class="grid-article-content">
-            <p>Vance Creek Bridge is one of those places where you don't believe it actually exists until you feel it beneath your shoes.
-            </p>
-          </div>
-          <div class="article-author">
-            <a href="#">Aidan Galassetti, 29 January 2017</a>
-          </div>
-
-        </div>
-      </div>
     </div>
 
 <!--
